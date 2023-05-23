@@ -9,15 +9,7 @@ Original file is located at
 ## Подключаем библиотеки
 """
 
-!git clone https://github.com/Networksx333/plasma_filaments.git
-!mkdir plasma_filaments/data
-!pip install keras-tcn
-!pip install joblib
-
-!pip install keras-tuner --upgrade
-
 import pandas as pd
-from IPython.display import clear_output
 import numpy as np
 from tensorflow import keras
 import tensorflow as tf
@@ -50,18 +42,13 @@ from keras.models import Model
 from copy import copy
 import joblib
 from matplotlib.colors import LogNorm, Normalize
-import keras_tuner
 # Importing a libraries for working with a matrix
 
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 import matplotlib.animation as animation
-from IPython import display
-import cv2
 
-# Import library to clean output
-from IPython.display import clear_output
 
 # Импорт библиотеки для распаковки
 import os
