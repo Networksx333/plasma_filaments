@@ -66,7 +66,6 @@ for i in os.listdir():
 
 with open(file, 'r') as f:
     lines = f.readlines()
-print(lines[:10])
 # удаляем первую строку
 lines.pop(0)
 
@@ -114,11 +113,7 @@ std = y_d2.std()
 frequency = np.abs(np.fft.fftfreq(len(y_d2)))
 # print(frequency)
 
-plt.figure(figsize=(10,5))
-plt.plot(x, y)
-plt.title("Первоначальный набор данных")
-plt.show()
-plt.figure(figsize=(10,5))
+
 colors = ["blue", "red"]
 region = 3
 # for i in range(len(x_d2)-region):
@@ -136,7 +131,6 @@ region = 3
 # plt.show()
 # plt.figure(figsize=(10,5))
 
-plt.show()
 
 y_d2_logic = np.zeros(len(y_d2))
 
@@ -149,9 +143,6 @@ for i in range(3, len(y_d2_logic)-3):
       y_d2_logic[i] = True
 
 y_f = np.array([y[i] if y_d2_logic[i] else 0 for i in range(len(y_d2_logic))])
-
-plt.figure(figsize=(10, 5))
-plt.plot(x_d2, y_f)
 
 def x_in_y(query, base):
     """
@@ -253,10 +244,10 @@ for i in range(len(filaments[0])):
   #       count += 1
   #       filrn.remove(i)
   #       break
-print("==========================================")
-print(f"Количество найденных филаментов: {len(filaments[0])}")
+#print("==========================================")
+#print(f"Количество найденных филаментов: {len(filaments[0])}")
 # print(f"Количество реальных филаментов: {count}")
-print("==========================================")
+#print("==========================================")
 
 # with zipfile.ZipFile("yes4.zip", 'r') as zip_file:
 #   zip_file.extractall()
@@ -379,7 +370,7 @@ for i in range(len(filaments[0])):
     c = 0
 
 fil_for_training = np.array(fil_for_training)
-print(count)
+print("Найдено филаментов:", count)
 # print(f"Количество найдённых филаментов {count}, по файлу А.Ю. их должно быть {filr.shape[0]} ")
 
 make_archive("data", "zip", "plasma_filaments/data")
